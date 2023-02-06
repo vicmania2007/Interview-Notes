@@ -24,6 +24,7 @@ Arrays.copyOf
      
 Convert int[] to list
     Arrays.stream(<array name>).boxed().collect(Collectors.toList());
+     List<int[]> list = new ArrayList<>(Arrays.asList(intervals));
 
 
 
