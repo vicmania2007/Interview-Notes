@@ -35,6 +35,9 @@ list.addAll(Collection<Datatype>)
 - [ ] Return empty list. - List.of()
 - [ ] Convert array to list - Arrays.asList(<the array to convert>);  P.S need to import java.util.Arrays
     - [ ] Example - Arrays.asList(s.split(" "));   // useful to split sentences into words
+     
+List to Array
+     - list.toArray(new int[list.size()][2]);
 
 
 Queue 
