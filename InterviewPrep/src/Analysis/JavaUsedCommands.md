@@ -23,7 +23,7 @@ Arrays
 Arrays.copyOf
      
 Convert int[] to list
-    Arrays.stream(ints).boxed().collect(Collectors.toList());
+    Arrays.stream(<array name>).boxed().collect(Collectors.toList());
 
 
 
