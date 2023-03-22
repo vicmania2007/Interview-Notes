@@ -15,6 +15,10 @@ Collections
 Import java.util.collections
 
 Collections.reverse(<List>);
+     
+Collections.sort(list);
+     
+Always use Collections.sort(list, new Comparator<Class>())
 
 
 Arrays
@@ -26,6 +30,8 @@ Convert int[] to list
     Arrays.stream(<array name>).boxed().collect(Collectors.toList());
      List<int[]> list = new ArrayList<>(Arrays.asList(intervals));
 
+     
+Arrays.sort(<array created>);
 
 
 List
@@ -102,6 +108,22 @@ char letter : new char[] {'a', 'b'}
 Comparator
 ----------------------------------------------------------------------------------------
 
+    When to use different form of comparators
+    -----------------------------------------
+     
+     1. Using Comparable
+     Each wrapper class(Integer, Double, or Long), String class, and Date class implements an interface called Comparable. This interface contains a compareTo(T o) method which is used by sorting methods to sort the Collection. This method returns a negative integer, zero, or a positive integer if this object is less than, equal to, or greater than the object passed as an argument.
+     
+ **    If we use the Collections.sort(List<T> list) method to sort an ArrayList, then the class whose objects are stored in the ArrayList must implement the Comparable interface. If the ArrayList stores an Integer, a Long, or a String, then we don’t need to worry as these classes already implement the Comparable interface. But if the ArrayList stores a custom class object, then that class must implement the Comparable interface.**
+     
+     ```
+     @Override
+	public int compareTo(Employee emp) {
+		//We will sort the employee based on age in ascending order
+        //returns a negative integer, zero, or a positive integer as this employee age
+        //is less than, equal to, or greater than the specified object.
+        return (this.age - emp.age);
+	}```
 
     Comparator using Lambda expressions
     -----------------------------------
